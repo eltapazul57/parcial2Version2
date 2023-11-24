@@ -1,0 +1,21 @@
+<div class="row justify-content-end">
+  <h5 class="col-4"><strong>Opiniones: {{getOpiniones()}}</strong></h5>
+  <h5 class="col-4"><strong>Estreallas promedios: {{getCalificacion()}}</strong></h5>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mb-2" *ngFor="let receta of recetas">
+          <div class="card p-2" style="width: 15rem; height: 33rem">
+              <img
+                class="card-img-top"
+                src="{{ receta.imagen }}"
+                alt="{{ receta.nombre }}"
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{ receta.nombre }}</h5>
+                  <p class="card-text">[{{ receta.descripcion }}]</p>
+              </div>
+           </div>
+      </div>
+   </div>
+</div>
